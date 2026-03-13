@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Amazing Nepal</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f5f5f5;
+      color: #333;
+    }
+
+    /* top navigation bar */
+    .navbar {
+      background-color: #c0392b;
+      padding: 15px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .navbar h1 {
+      color: white;
+      margin: 0;
+      font-size: 22px;
+    }
+
+    .navbar ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      gap: 20px;
+    }
+
+    .navbar ul li a {
+      color: white;
+      text-decoration: none;
+      font-size: 15px;
+    }
+
+    .navbar ul li a:hover {
+      text-decoration: underline;
+    }
+
+    /* hero / banner at the top */
+    .hero {
+      background-color: #2c3e50;
+      color: white;
+      text-align: center;
+      padding: 80px 20px;
+    }
+
+    .hero h2 {
+      font-size: 48px;
+      margin: 0 0 15px 0;
+    }
+
+    .hero p {
+      font-size: 18px;
+      margin: 0 auto;
+      max-width: 600px;
+      color: #ccc;
+    }
+
+    /* section styles */
+    .section {
+      padding: 50px 30px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .section h2 {
+      font-size: 30px;
+      color: #c0392b;
+      border-bottom: 3px solid #c0392b;
+      padding-bottom: 8px;
+      margin-bottom: 25px;
+    }
+
+    /* cards layout */
+    .cards {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .card {
+      background-color: white;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 20px;
+      width: 220px;
+      box-shadow: 2px 2px 6px rgba(0,0,0,0.08);
+    }
+
+    .card:hover {
+      box-shadow: 4px 4px 12px rgba(0,0,0,0.15);
+    }
+
+    .card .icon {
+      font-size: 32px;
+      margin-bottom: 10px;
+    }
+
+    .card h3 {
+      margin: 0 0 8px 0;
+      font-size: 17px;
+      color: #2c3e50;
+    }
+
+    .card p {
+      margin: 0;
+      font-size: 14px;
+      color: #666;
+      line-height: 1.6;
+    }
+
+    .card .number {
+      font-size: 26px;
+      font-weight: bold;
+      color: #c0392b;
+      margin-top: 10px;
+    }
+
+    /* dark background section for nature */
+    .dark-section {
+      background-color: #2c3e50;
+      padding: 50px 30px;
+      color: white;
+    }
+
+    .dark-section h2 {
+      font-size: 30px;
+      color: #f0c040;
+      border-bottom: 3px solid #f0c040;
+      padding-bottom: 8px;
+      margin-bottom: 25px;
+      max-width: 1100px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .dark-section p.intro {
+      color: #aaa;
+      max-width: 1100px;
+      margin: -10px auto 25px auto;
+      font-size: 15px;
+    }
+
+    .dark-cards {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .dark-card {
+      border: 1px solid #445566;
+      border-radius: 8px;
+      padding: 20px;
+      width: 220px;
+      color: white;
+    }
+
+    .dark-card:hover {
+      border-color: #f0c040;
+    }
+
+    .dark-card h3 {
+      margin: 0 0 8px 0;
+      font-size: 16px;
+      color: #f5f5f5;
+    }
+
+    .dark-card p {
+      margin: 0;
+      font-size: 14px;
+      color: #999;
+      line-height: 1.6;
+    }
+
+    /* culture section */
+    .culture-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .culture-list li {
+      border-top: 1px solid #ddd;
+      padding: 18px 0;
+      display: flex;
+      gap: 15px;
+    }
+
+    .culture-list li .num {
+      color: #c0392b;
+      font-weight: bold;
+      font-size: 18px;
+      min-width: 25px;
+    }
+
+    .culture-list li h4 {
+      margin: 0 0 5px 0;
+      font-size: 16px;
+    }
+
+    .culture-list li p {
+      margin: 0;
+      font-size: 14px;
+      color: #666;
+      line-height: 1.6;
+    }
+
+    /* quote box */
+    .quote {
+      background-color: white;
+      border-left: 5px solid #f0c040;
+      padding: 15px 20px;
+      margin: 30px 0;
+      font-style: italic;
+      font-size: 18px;
+      color: #555;
+    }
+
+    /* footer */
+    footer {
+      background-color: #1a1a1a;
+      color: #aaa;
+      text-align: center;
+      padding: 30px 20px;
+      font-size: 14px;
+    }
+
+    footer span {
+      color: #c0392b;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Navigation Bar -->
+  <div class="navbar">
+    <h1>🏔 Nepal</h1>
+    <ul>
+      <li><a href="#mountains">Mountains</a></li>
+      <li><a href="#nature">Nature</a></li>
+      <li><a href="#culture">Culture</a></li>
+      <li><a href="#facts">Fun Facts</a></li>
+    </ul>
+  </div>
+
+  <!-- Hero Banner -->
+  <div class="hero">
+    <h2>🇳🇵 Amazing Nepal</h2>
+    <p>The land of the Himalayas, ancient temples, and incredible wildlife. Nepal is truly one of the most unique countries in the world!</p>
+  </div>
+
+  <!-- Mountains Section -->
+  <div class="section" id="mountains">
+    <h2>🏔 The Himalayas</h2>
+    <p style="margin-bottom: 25px; color: #555;">Nepal has 8 of the world's 14 highest mountains. No other country comes close to this!</p>
+
+    <div class="cards">
+      <div class="card">
+        <div class="icon">🏔</div>
+        <h3>Mount Everest</h3>
+        <p>The highest mountain on Earth. Known in Nepali as "Sagarmatha" which means "Forehead of the Sky".</p>
+        <div class="number">8,849m</div>
+      </div>
+
+      <div class="card">
+        <div class="icon">⛰</div>
+        <h3>Annapurna Circuit</h3>
+        <p>One of the most famous trekking routes in the world. It goes through forests, villages, and deserts all in one trip!</p>
+        <div class="number">230 km</div>
+      </div>
+
+      <div class="card">
+        <div class="icon">🌨</div>
+        <h3>Kanchenjunga</h3>
+        <p>The 3rd highest mountain in the world. Local people consider it sacred and for many years did not allow anyone to reach the very top.</p>
+        <div class="number">8,586m</div>
+      </div>
+
+      <div class="card">
+        <div class="icon">🧗</div>
+        <h3>Sherpa People</h3>
+        <p>The Sherpa people live in the high mountains. Their bodies are naturally built for high altitudes — they can breathe easier in thin air than most people.</p>
+        <div class="number">~150,000</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Nature Section (dark background) -->
+  <div class="dark-section" id="nature">
+    <h2>🌿 Nature and Wildlife</h2>
+    <p class="intro">Nepal goes from tropical jungle to Arctic snow in just 200 km. You can see rhinos and snow leopards in the same country!</p>
+
+    <div class="dark-cards">
+      <div class="dark-card">
+        <h3>🦏 One-Horned Rhino</h3>
+        <p>Chitwan National Park has one of the biggest populations of the rare one-horned rhino in the world. Over 700 rhinos live there!</p>
+      </div>
+
+      <div class="dark-card">
+        <h3>🐆 Snow Leopard</h3>
+        <p>The snow leopard is very rare and shy. Nepal's high mountains are one of the only places you can find them. People call them the "ghost cat."</p>
+      </div>
+
+      <div class="dark-card">
+        <h3>🐼 Red Panda</h3>
+        <p>Eastern Nepal's forests are home to the cute red panda. It looks like a mix between a fox and a bear!</p>
+      </div>
+
+      <div class="dark-card">
+        <h3>🐦 900+ Bird Types</h3>
+        <p>Nepal has over 900 types of birds! That is more than the entire continent of North America. Bird watchers love visiting Nepal.</p>
+      </div>
+
+      <div class="dark-card">
+        <h3>🌸 Rhododendron</h3>
+        <p>Nepal's national flower is the rhododendron. In spring, whole hillsides turn red, pink, and white with these beautiful flowers.</p>
+      </div>
+
+      <div class="dark-card">
+        <h3>💧 Phewa Lake</h3>
+        <p>This beautiful lake in Pokhara reflects the Fishtail Mountain on its surface. On a calm morning it looks like a perfect mirror.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Culture Section -->
+  <div class="section" id="culture">
+    <h2>🏛 Culture and Heritage</h2>
+
+    <div class="quote">
+      "Nepal has over 125 different ethnic groups and 123 languages — all in one small country!"
+    </div>
+
+    <ul class="culture-list">
+      <li>
+        <span class="num">1.</span>
+        <div>
+          <h4>Pashupatinath Temple</h4>
+          <p>One of the most important Hindu temples in the world. It sits on the Bagmati River in Kathmandu and has been active for over 1,500 years without stopping.</p>
+        </div>
+      </li>
+
+      <li>
+        <span class="num">2.</span>
+        <div>
+          <h4>The Living Goddess (Kumari)</h4>
+          <p>Nepal has a very special tradition — a young girl is chosen from the Newar community and worshipped as a living goddess. There are separate Kumaris in Kathmandu, Bhaktapur, and Patan.</p>
+        </div>
+      </li>
+
+      <li>
+        <span class="num">3.</span>
+        <div>
+          <h4>Old Newari Buildings</h4>
+          <p>The temples in Kathmandu Valley (like Bhaktapur Durbar Square) are UNESCO World Heritage Sites. The wood carvings and brickwork are hundreds of years old and still standing!</p>
+        </div>
+      </li>
+
+      <li>
+        <span class="num">4.</span>
+        <div>
+          <h4>Birthplace of Buddha</h4>
+          <p>Lumbini, in southern Nepal, is where the Buddha was born. Millions of Buddhists from all around the world visit this place every year.</p>
+        </div>
+      </li>
+
+      <li>
+        <span class="num">5.</span>
+        <div>
+          <h4>Lots of Festivals!</h4>
+          <p>Nepal celebrates more festivals than almost any other country. Dashain, Tihar, Holi, Indra Jatra, Losar — almost every month has at least one big festival!</p>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+  <!-- Fun Facts Section -->
+  <div style="background-color: #eee; padding: 50px 30px;" id="facts">
+    <div style="max-width: 1100px; margin: 0 auto;">
+      <h2 style="font-size: 30px; color: #c0392b; border-bottom: 3px solid #c0392b; padding-bottom: 8px; margin-bottom: 25px;">🤔 Fun Facts About Nepal</h2>
+
+      <div class="cards">
+        <div class="card" style="background-color: #f9f9f9;">
+          <div class="icon">🚩</div>
+          <h3>Unique Flag Shape</h3>
+          <p>Nepal is the ONLY country in the world with a flag that is not a rectangle. It is two triangles stacked on top of each other!</p>
+        </div>
+
+        <div class="card" style="background-color: #f9f9f9;">
+          <div class="icon">🕐</div>
+          <h3>Odd Time Zone</h3>
+          <p>Nepal's time zone is UTC+5:45. That extra 45 minutes is very unusual — most countries use whole hours. Nepal wanted to be different from India and China!</p>
+        </div>
+
+        <div class="card" style="background-color: #f9f9f9;">
+          <div class="icon">📅</div>
+          <h3>Different Calendar</h3>
+          <p>Nepal uses its own calendar called Bikram Sambat. It is about 56 years ahead of the regular calendar. When the world celebrated 2024, Nepal was celebrating 2080!</p>
+        </div>
+
+        <div class="card" style="background-color: #f9f9f9;">
+          <div class="icon">🐄</div>
+          <h3>Cow is National Animal</h3>
+          <p>Nepal is the only country where the cow is the national animal. Cows walk freely on the streets and harming one is against the law.</p>
+        </div>
+
+        <div class="card" style="background-color: #f9f9f9;">
+          <div class="icon">🗺</div>
+          <h3>Tiny but Tall</h3>
+          <p>Nepal is a small country with no sea access, but it has the biggest height range on Earth — from 70m flat land all the way up to 8,849m on Everest!</p>
+        </div>
+
+        <div class="card" style="background-color: #f9f9f9;">
+          <div class="icon">🛡</div>
+          <h3>Never Colonised</h3>
+          <p>While most of Asia was controlled by European countries, Nepal was never colonised. It stayed independent by being very smart in its politics.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p style="font-size: 30px; margin-bottom: 8px;">🇳🇵</p>
+    <p>Made with love for <span>Nepal</span> — The Roof of the World</p>
+    <p style="margin-top: 6px;">Nepal · नेपाल</p>
+  </footer>
+
+</body>
+</html>
+
